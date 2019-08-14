@@ -7,8 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    출력할 단 : <input type="text" id="num">
+    <button onclick="display()">확인</button>
     <script>
-      let num = prompt("2~9 숫자를 입력하세요")
+     
+     function display() {
+        let num = document.getElementById('num').value;
       let n = Number(num);
       if(n>=2 && n<=9) {
           for(let i=1; i<10; i++) {
@@ -17,6 +21,7 @@
       }    else {
           document.write("2~9 숫자를 입력해주세요!");
       }
+    }
     </script>
 </body>
 </html>

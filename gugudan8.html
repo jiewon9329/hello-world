@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let num = prompt("2~9 숫자를 입력하세요")
+      let n = Number(num);
+      if(n>=2 && n<=9) {
+          for(let i=1; i<10; i++) {
+              document.write(n+ " * " + i +" = "+ n*i +"<br>");
+          }
+      }    else {
+          document.write("2~9 숫자를 입력해주세요!");
+      }
+    </script>
+</body>
+</html>

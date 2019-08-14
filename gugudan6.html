@@ -7,12 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+    출력할 단수 : <input type="text" id="myText" value="값을 넣어라"> <br>
+    <button onclick ="runGugudan()">확인</button> <br>
     <Script>
-    let n = prompt("구구단을 해보자");
-    let i=1;
-    while(i<10) {
-        document.write(n + " * " + i + " = "  + Number(n)*i + "<br>");
-        i++;
+    function runGugudan() {
+        let num = document.getElementById("myText").value;
+        let n = Number(num);
+        let i=1;
+        while(i<10) {
+            document.write(n + " * " + i + " = "  + Number(n)*i + "<br>");
+            i++;
+        }
     }
     </Script>
 </body>

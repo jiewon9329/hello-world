@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>구구단 전체 출력</h1>
+    <script>
+      let result = [];
+      for (let n =2; n <= 9; n++) {
+      //calculate
+        for (let i = 1; i <=9; i++) {
+            result[i] = n * i;
+        }
+        //print
+        document.write("<h2>" + n + "단</h2>")
+        for (let i = 1; i <= 9; i++) {
+            let str = "";
+            str += n;
+            str += " X ";
+            str += i;
+            str += " = "
+            str += n*i;
+            document.write(str + "<br>");
+        }
+      }
+    </script>
+</body>
+</html>

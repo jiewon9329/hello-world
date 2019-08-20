@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let input = prompt("ㅇ,ㅇ 단으로 원하는 단을 입력하세요");
+    let inputArray = input.split(',');
+
+    function guguCal(x) {
+        for(let i=1; i<=inputArray[1]; i++) {
+            document.write(x + " * " + i + " = " + x*i + "<br>");
+        }
+    }
+
+    function guguPrint() {
+        for(let i=1; i<=inputArray[0]; i++) {
+            guguCal(i);
+        }
+    }
+    guguPrint();
+    //inputArray[0] 의 값이 8일 때
+    //inputArray[1] 의 값이 7일 때
+
+    </script>
+</body>
+</html>

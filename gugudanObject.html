@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="gugudanId"></div>
+    <script>
+        let gugudan = {};
+        gugudan.dan = [];
+        gugudan.current = -1;
+
+        gugudan.calculate = function(n) {
+            gugudan.current = n;
+            for(let i=1; i<10; i++) {
+                this.dan[i] = n * i;
+            }
+        }
+
+        gugudan.list = function() {
+            for(let i=1; i<10; i++) {
+                document.write(this.current + "입니다" + i);
+            }
+        }
+
+        function main() {
+            for(let i=1; i<10; i++) {
+                gugudan.calculate(i);
+                gugudan.list();
+            }
+        }
+      main();
+    </script>
+</body>
+</html>

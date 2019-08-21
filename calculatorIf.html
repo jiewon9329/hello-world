@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 문자열 계산기 구현하기</h1>
+
+    <div>
+        첫번째수 : <input type="text" id="n1"> <br>
+        연산자 : <input type="text" id="n3"> <br>
+        두번째수 : <input type="text" id="n2"> <br>
+
+        <button onclick="calc()">실행!</button>
+
+    </div>
+    <div id = "output">요기에 계산 결과가 나올꺼야</div>
+
+    <script>
+
+        function calc() {
+            let firstNumber = document.getElementById('n1').value;
+        let secondNumber = document.getElementById('n2').value;
+        let n3 = document.getElementById('n3').value;
+        let n1 = Number(firstNumber);
+        let n2 = Number(secondNumber);
+
+        let input = document.getElementById('output');
+            switch(n3) {
+                case '+' :
+                  result = "더하기 : " + (n1 + n2);
+                  input.innerHTML = result;
+                  break;
+                case '-' :
+                result = "빼기 : " + (n1 - n2);
+                input.innerHTML = result;
+                  break;
+                case '*' :
+                result = "곱하기 : " + (n1 * n2);
+                input.innerHTML = result;
+                  break;
+                case '/' :
+                result = "나누기 : " + (n1 / n2);
+                input.innerHTML = result;
+                  break;
+
+                  default:
+                input.innerHTML = "제대로 입력해 이자식아";
+            }
+        }
+    </script>
+</body>
+</html>
